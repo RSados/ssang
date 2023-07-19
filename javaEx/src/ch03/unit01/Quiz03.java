@@ -27,7 +27,7 @@ public class Quiz03 {
 		ss=(double)b/3600;
 		time=a/ss;
 		h=(int)time/3600;
-		m=time*3600%3600/60;	
+		m=time%3600/60;	
 		s=time%3600%60;
 		s=(int)(s*100)/100.0;
 		
