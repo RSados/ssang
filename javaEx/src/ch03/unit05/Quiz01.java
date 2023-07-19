@@ -17,11 +17,9 @@ public class Quiz01 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		char c,s;
-		int a;
 		
 		System.out.print("문자 ? ");
 		c=sc.next().charAt(0);
-		a=c;
 		
 		s= c>='A'&& c<='Z'? (char)(c+32):c>='a'&& c<='z'? (char)(c-32):(c);
 		System.out.printf("%c->%c",c,s);
