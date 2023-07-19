@@ -1,4 +1,4 @@
-package ch3.unit03;
+package ch03.unit03;
 
 public class Ex02 {
 	public static void main(String[] args) {
