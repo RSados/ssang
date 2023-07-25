@@ -7,6 +7,7 @@ public class QuizH05 {
 			for(int j=2; j<i;j++) {
 				if(i%j==0) {
 					count++;
+					break;
 				}
 			}
 			if(count==0) {

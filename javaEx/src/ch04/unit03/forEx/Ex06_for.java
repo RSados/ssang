@@ -12,12 +12,24 @@ public class Ex06_for {
 		System.out.println(s);
 		*/
 		//1~100까지 홀수합
+		/*
 		int n,s;
 		s=0;
 		for(n=1;n<=100;n+=2) {
 			s+=n;
 		}
-		System.out.println("결과:"+s);
+		System.out.println("결과:"+s);*/
+		
+		int s,n;
+		
+		s=0;
+		n=1;
+		while(n<10) {
+			n+=2;
+			s+=n;
+			
+		}
+		System.out.println("결과: "+s);
 	}
 
 }
