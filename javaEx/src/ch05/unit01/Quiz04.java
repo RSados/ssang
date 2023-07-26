@@ -26,12 +26,12 @@ public class Quiz04 {
 	}
 	tot+=1;//1일이 무슨 요일인지 알기위해
 	
-	w=tot%7;//
+	w=tot%7;//7로 나눈 나머지 6나오면 토요일 0나오면 일요일 이런식
 	
 	System.out.printf("\n\t %d년 %d월\n",y,m);
 	System.out.println("  일  월  화  수  목  금  토");
 	System.out.println("-----------------------------------");
-	
+	//1일 앞의 공백 
 	for(int i=0;i<w;i++) {
 		System.out.print("    ");
 	}
