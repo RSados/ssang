@@ -1,6 +1,6 @@
 package ch06_unit02;
 
-public class Ex02 {
+public class Ex02_class {
 	public static void main(String[] args) {
 		int x;//일반변수. 메소드 안에서 선언한 변수
 	    //System.out.println(x);//컴오류.초기화가 되어 있지 않음
