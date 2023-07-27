@@ -1,4 +1,4 @@
-package ch5.unit02;
+package ch05.unit01.sortEx;
 
 import java.util.Arrays;
 

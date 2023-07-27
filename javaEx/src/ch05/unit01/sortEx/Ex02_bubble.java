@@ -1,4 +1,4 @@
-package ch5.unit02;
+package ch05.unit01.sortEx;
 
 public class Ex02_bubble {
 	public static void main(String[] args) {
