@@ -58,7 +58,7 @@ class Test2 {
 	int a;//객체가 생성될때 0으로 초기화
 	int b=10;//객체가 생성될때 10으로 초기화
 	
-//    System.out.println(a);//컴오류 선언부에는 실행문이 올수 없엄
+//    System.out.println(a);//컴오류 선언부에는 실행문이 올 수 없다
 
 //메소드(인스턴스 메소드)
 	public void disp() {
