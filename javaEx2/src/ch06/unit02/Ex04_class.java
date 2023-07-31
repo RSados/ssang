@@ -1,4 +1,4 @@
-package ch06_unit02;
+package ch06.unit02;
 
 public class Ex04_class {
 	public static void main(String[] args) {
