@@ -22,6 +22,7 @@ public class Ex08_for {
 				break;
 			}
 		}
+		System.out.println("결과:" +s);
 	}
 
 }

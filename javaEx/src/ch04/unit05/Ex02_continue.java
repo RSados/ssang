@@ -21,6 +21,7 @@ public class Ex02_continue {
 			s+=n;
 		}
 		System.out.println("결과: "+s);
+		sc.close();
 	}
 
 }

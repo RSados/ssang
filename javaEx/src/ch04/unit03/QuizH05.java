@@ -15,7 +15,7 @@ public class QuizH05 {
 	
 		
 		
-		
+	    System.out.println(n);
 		
 		sc.close();
 }

@@ -1,7 +1,5 @@
 package ch05.unit01.sortEx;
 
-import java.util.Arrays;
-
 public class Ex01_selection {
 	public static void main(String[] args) {
 		//selection sort
