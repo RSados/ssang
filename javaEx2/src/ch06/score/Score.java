@@ -29,8 +29,22 @@ public class Score {
 	
 	//한번 조건에 일치하는 ScoreVO 객체 반환
 	public ScoreVO readScore(String hak) {
-		ScoreVO vo = null;
+		ScoreVO vo=null;
 		
+		for(int i=0; i<count; i++) {
+			vo = list[i];
+			if(vo.getHak().equals(hak)){
+				break;
+
+			}
+			else{
+				vo=null;
+			}
+
+		
+		}
+		
+			
 		return vo;
 	}
 	

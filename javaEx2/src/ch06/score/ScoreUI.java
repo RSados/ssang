@@ -69,8 +69,17 @@ public class ScoreUI {
 	}
 	
 	public void findByHak() {
+		String a;
 		System.out.println("\n학번 검색...");
+		a=sc.next();
+		ScoreVO search = ss.readScore(a);
+		if(search==null){
+			System.out.println("찾을수 없는 학번입니다");
+		}
+		else{
+		System.out.println(search.getName());}
 	}
+	
 		
 	public void print() {
 		System.out.println("\n전체 리스트...");
