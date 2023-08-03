@@ -30,7 +30,9 @@ public class Score {
 	//한번 조건에 일치하는 ScoreVO 객체 반환
 	public ScoreVO readScore(String hak) {
 		ScoreVO vo = null;
-		
+		if(hak.equals(vo)) {
+			
+		}
 		return vo;
 	}
 	

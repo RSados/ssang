@@ -69,7 +69,12 @@ public class ScoreUI {
 	}
 	
 	public void findByHak() {
+		String i;
 		System.out.println("\n학번 검색...");
+		i=sc.next();
+		ScoreVO String = ss.readScore(i);
+		
+		
 	}
 		
 	public void print() {
