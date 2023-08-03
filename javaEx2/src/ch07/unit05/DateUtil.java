@@ -1,6 +1,8 @@
 package ch07.unit05;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 //추후에 Exception 처리를 해야 함
 public class DateUtil {
@@ -9,7 +11,7 @@ public class DateUtil {
 	 * @param date       판별할 문자열의 날짜
 	 * @return           형식이 올바른지 여부
 	 */
-	public boolean isVaildDate(String date) {
+	public boolean isValidDate(String date) {
 		boolean result = false;
 		
 		if(date.length() != 8 && date.length() != 10){
@@ -46,7 +48,7 @@ public class DateUtil {
 	public int toAge(String birth) {
 		int result = -1;
 		
-		if(! isVaildDate(birth)) {
+		if(! isValidDate(birth)) {
 			return result;
 		}
 		
@@ -68,6 +70,34 @@ public class DateUtil {
 		
 		
 		return result;
+	}
+	
+	public long toDiffDays(String startDate, String endDate) {
+		long diff = 0;
+		
+		if(! isValidDate(startDate) || ! isValidDate(endDate)) {
+			throw new IllegalArgumentException("Invlid date Format");
+		}
+		
+		startDate = startDate.replaceAll("\\-|\\/|//.", "");
+		endDate = endDate.replaceAll("\\-|\\/|//.", "");
+		
+		try {
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+			
+			Date begin = sdf.parse(startDate);
+			Date end = sdf.parse(endDate);
+			
+			diff = (end.getTime()-begin.getTime())/(1000*60*60*24);
+			
+		} catch (Exception e) {
+			//e.printStackTrace();
+			throw new IllegalArgumentException("Invlid date Format");
+
+		}
+		
+		
+		return diff;
 	}
 
 }
