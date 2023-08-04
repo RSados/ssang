@@ -1,11 +1,9 @@
-package ch06.score;
+package ch06.di;
 
 public class App {
-
 	public static void main(String[] args) {
-		ScoreUI ui = new ScoreUI();
+		UserUI ui = new UserUI();
 		ui.menu();
-		
-		new ScoreUI().menu();
 	}
+
 }

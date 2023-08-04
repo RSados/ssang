@@ -1,19 +1,19 @@
-package ch06.score;
+package ch06.score2;
 
-public class ScoreVO { // Value Object
-	// 필드(인스턴스 필드)
-	// private : 해당 클래스에서만 접근 가능
+public class ScoreVO {//Value Object
+	//필드(인스턴스 필드)
+	//private : 해당 클래스에서만 접근 가능
 	private String hak;
 	private String name;
 	private int kor;
 	private int eng;
 	private int mat;
 	
-	// getter / setter : <shift> + <alt> + <s> + <r>
-	public String getHak() {
+	//getter / setter : <shift> + <alt> + <s> + <r>
+	public String getHak() {//get + 'H'ak 값을 가져옴
 		return hak;
 	}
-	public void setHak(String hak) {
+	public void setHak(String hak) {// 값을 넣어줌
 		this.hak = hak;
 	}
 	public String getName() {
@@ -46,7 +46,16 @@ public class ScoreVO { // Value Object
 	}
 	
 	public int getAve() {
-		return getTot() / 3;
+		return getTot()/3;
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }
