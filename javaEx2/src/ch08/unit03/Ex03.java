@@ -7,10 +7,15 @@ public class Ex03 {
 		// up-casting
 		Test3 t2 = new Sample3();
 		Test3 t3 = new Demo3();
+		Sample3 t4 = new Sample3();
 		
 		t1.disp();//Test3 print...
 		t2.disp();//Sample3 print...
 		t3.disp();//Test3 print...
+		t4 = (Sample3)t2;
+		t2.disp();
+		t4.disp();
+		
 	}
 }
 

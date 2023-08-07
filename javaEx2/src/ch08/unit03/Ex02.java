@@ -4,6 +4,7 @@ public class Ex02 {
 	public static void main(String[] args) {
 		//up-casting
 		Test2 t = new Demo2();//객체의 다형성
+		Test2 t1 = new Test2();
 		
 		//up-casting
 		// : 상위 클래스의 객체가 하위 클래스의 객체를 참조하는 것
@@ -22,6 +23,7 @@ public class Ex02 {
 		//(Demo2)t.write();//컴파일 에러,()보다 .이 우선 순위가 높은
 		((Demo2)t).write();//다운 캐스팅
 		System.out.println();
+		t1.print();
 		
 		/*
 		Test2 tt = new Test2();
