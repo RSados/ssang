@@ -16,6 +16,10 @@ public class Ex18 {
 			uu.setAge(sc.nextInt());
 			
 			System.out.println(uu.getName() + "," + uu.getAge());
+		} catch (NameValidException e) {
+			System.out.println("이름은 두자이상...");
+		} catch (AgeValidException e) {
+			System.out.println("나이는 0이상...");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}finally {
