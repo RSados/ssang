@@ -10,7 +10,7 @@ public class Ex06 {
 		
 		System.out.println("중복 배제 출력");
 		for(int i=0;i<list.size();i++) {
-			if(list.indexOf(list.get(i))==1) {
+			if(list.indexOf(list.get(i))==i) {
 				System.out.print(list.get(i)+" ");
 			}
 		}
