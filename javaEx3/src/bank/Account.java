@@ -19,12 +19,15 @@ public class Account {
 	
 	public void addTransaction(TransactionVO vo) {
 		// 거래 내역 등록
-
+		transactionList.add(vo);
 	}
 	
 	public TransactionVO lastTransaction() {
 		// 마지막 거래 내역
-
+		if(transactionList.size() > 0) {
+			return transactionList.get(transactionList.size() - 1);
+		}
+		
 		return null;
 	}
 
