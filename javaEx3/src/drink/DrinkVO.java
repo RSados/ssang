@@ -1,16 +1,17 @@
 package drink;
 
 public class DrinkVO {
-	private String drinkname;
 	private int drinkprice;
 	private int drinkstock;
 	
-	public String getDrinkname() {
-		return drinkname;
+	public DrinkVO() {
+		
 	}
-	public void setDrinkname(String drinkname) {
-		this.drinkname = drinkname;
+	public DrinkVO(int drinkprice, int drinkstock) {
+		this.drinkprice = drinkprice;
+		this.drinkstock = drinkstock;
 	}
+	
 	public int getDrinkprice() {
 		return drinkprice;
 	}

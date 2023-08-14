@@ -9,7 +9,7 @@ public class DrinkUI {
 	private AdminUI adminUI = new AdminUI(drink);
 	private UserUI userUI = new UserUI(drink);
 	
-	public void menu() {
+	public void menu() throws NameVaildException, MoneyLackException {
 		int s;
 		while(true) {
 			do {
@@ -25,9 +25,8 @@ public class DrinkUI {
 			}
 			
 			switch(s) {
-			// case 1:AdminUI.login(); break;
-			case 1:adminUI.menu(); break;
-			case 2:userUI.menu(); break;
+			case 1:userUI.menu(); break;
+			case 2:adminUI.login(); break;
 			}
 		}
 	}

@@ -1,55 +1,59 @@
 package drink;
 
-import java.util.List;
-import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
 
-public class DrinkImpl implements Drink{
-	private List<DrinkVO> list = new ArrayList<>();
-	private int profit;
-
-	@Override
-	public List<DrinkVO> list() {
-		
-		return null;
+public class DrinkImpl implements Drink {
+	private Map<String , DrinkVO> map = new HashMap<String, DrinkVO>();
+	private int num=3;
+	private int income=0;
+	Calendar cal = Calendar.getInstance();
+	String s=String.format("%tF",cal);
+	
+	public DrinkImpl() {
+		map.put("코카콜라", new DrinkVO(1500, num));
+		map.put("환타포도", new DrinkVO(1300, num));
+		map.put("삼다수", new DrinkVO(1000, num));
+		map.put("봉봉", new DrinkVO(900, num));
+		map.put("레쓰비", new DrinkVO(500, num));
 	}
 
 	@Override
-	public DrinkVO readDrink(String drinkName) {
-		//입력한 드링크 이름과 저장된 드링크 객체중 이름이 같은거 출력
-		for(DrinkVO vo : list) {
-			if(vo.getDrinkname().equals(drinkName) ) {
-				return vo;
-			}
-		}
-		return null;
-	}
-
-	@Override
-	public void insertDrink(DrinkVO vo) {
-		//드링크 추가
-		list.add(vo);
-		
-	}
-
-	@Override
-	public boolean deleteDrink(String drinkName) {
-		//이름으로 드링크 찾아서 삭제
-		DrinkVO vo = readDrink(drinkName);
-		
-		if(vo==null) {
-			return false;
-		}
-		
-		list.remove(vo);
-		
-		return true;
-	}
-
-	@Override
-	public int profitDrink() {
-		//그날의 이익
-		return 0;
+	public Map<String, DrinkVO> listDrink() {
+		return map;
 	}
 	
+	@Override
+	public DrinkVO readDrink(String drinkName) {
+		DrinkVO vo = map.get(drinkName);
+		return vo;
+	}
+
+	@Override
+	public void insertDrink(String drinkName,DrinkVO vo) {
+		map.put(drinkName, vo);
+	}
+
+	@Override
+	public void income(String drinkName) {
+		int ss = map.get(drinkName).getDrinkprice();
+		income+=ss;
+	}
+
+	@Override
+	public int income() {
+		System.out.print(s+"의 수익");
+		return income;
+		
+	}
+
+	@Override
+	public boolean deleteDrink(String drink) {
+		DrinkVO vo = map.remove(drink);
+		return vo !=null;
+	}
+
 }
+
+	

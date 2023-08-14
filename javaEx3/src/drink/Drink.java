@@ -1,11 +1,14 @@
 package drink;
 
-import java.util.List;
+import java.util.Map;
 
 public interface Drink {
-	public List<DrinkVO> list();
-	public DrinkVO readDrink(String drinkName);
-	public void insertDrink(DrinkVO vo);
-	public boolean deleteDrink(String drinkName);
-	public int profitDrink();
+	public Map<String, DrinkVO> listDrink();
+	public DrinkVO readDrink(String drinkName); 
+	public void insertDrink(String drinkName, DrinkVO vo);
+	public void income(String drinkName);
+	public int income();
+	public boolean deleteDrink(String drink);
+	
+	
 }
